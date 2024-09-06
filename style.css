@@ -129,9 +129,10 @@ body {
     font-size: 0.9rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     width: 100%;
-    position: relative;
-    bottom: 0;
-    z-index: 101; /* Ensure footer is always visible */
+    position: fixed; /* Changed to fixed */
+    bottom: 0; /* Ensures footer stays at the bottom */
+    left: 0;
+    z-index: 100; /* Ensures footer is visible above other elements */
 }
 
 /* Mobile Responsiveness */
