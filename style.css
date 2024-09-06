@@ -30,30 +30,33 @@ body {
     z-index: 100;
 }
 
-/* Adjusted logo size */
+/* Adjusted logo size for responsiveness */
 .logo {
-    width: 350px; /* Significantly increased logo size */
-    margin-bottom: 10px; /* Reduced the gap between the logo and the text */
+    width: 300px; /* Set a reasonable default size */
+    max-width: 100%; /* Ensure the logo scales on smaller devices */
+    margin-bottom: 10px; /* Reduced gap between logo and text */
 }
 
+/* Error Title */
 .error-title {
-    font-size: 3.5rem; /* Reduced to maintain balance with the larger logo */
+    font-size: 3.2rem; /* Adjusted for better readability */
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: 10px; /* Reduced top margin */
-    margin-bottom: 5px; /* Reduced bottom margin */
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
+/* Error Subtitle */
 .error-subtitle {
-    font-size: 1.3rem; /* Slightly smaller for better visual hierarchy */
-    margin-bottom: 8px; /* Reduced margin below the subtitle */
+    font-size: 1.3rem; /* Adjusted subtitle font size */
+    margin-bottom: 10px; /* Reduced gap below subtitle */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Back button styling */
 .go-back {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 15px 30px;
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: #fff;
@@ -92,7 +95,7 @@ body {
 .bird {
     width: 80px;
     height: 50px;
-    background-image: url('https://alif1010.github.io/omni-portal-error-page/bird.png'); /* Corrected bird image path */
+    background-image: url('https://alif1010.github.io/omni-portal-error-page/bird.png');
     background-size: contain;
     background-repeat: no-repeat;
     animation: flapWings 0.6s ease-in-out infinite; /* Wing flapping */
@@ -108,13 +111,13 @@ body {
 /* Bird flying animation */
 @keyframes flyBird {
     0% { transform: translateX(-100px); }
-    100% { transform: translateX(100vw); } /* Fly from left to right across the screen */
+    100% { transform: translateX(100vw); }
 }
 
 /* Cloud Animation */
 @keyframes moveClouds {
-    0% { transform: translateX(0); } /* Start right off the screen */
-    100% { transform: translateX(100vw); } /* Move across the screen */
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100vw); }
 }
 
 /* Footer */
@@ -128,13 +131,13 @@ body {
     width: 100%;
     position: relative;
     bottom: 0;
-    z-index: 101; /* Ensure footer appears on top of other content */
+    z-index: 101; /* Ensure footer is always visible */
 }
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     .error-title {
-        font-size: 3.5rem;
+        font-size: 2.5rem; /* Adjust title size for smaller screens */
     }
     .error-subtitle {
         font-size: 1.2rem;
@@ -143,11 +146,14 @@ body {
         font-size: 1rem;
         padding: 12px 24px;
     }
+    .logo {
+        width: 250px; /* Smaller logo on mobile */
+    }
 }
 
 @media screen and (max-width: 480px) {
     .error-title {
-        font-size: 3rem;
+        font-size: 2rem; /* Further adjust title size for very small screens */
     }
     .error-subtitle {
         font-size: 1rem;
@@ -155,5 +161,8 @@ body {
     .go-back {
         font-size: 0.9rem;
         padding: 10px 20px;
+    }
+    .logo {
+        width: 200px; /* Even smaller logo for tiny devices */
     }
 }
