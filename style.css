@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif; /* Font restored */
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -11,7 +11,7 @@ body {
     color: white;
 }
 
-/* Main content area */
+/* Main content area with transparent banner */
 .content {
     display: flex;
     flex-direction: column;
@@ -21,8 +21,11 @@ body {
     padding: 40px 20px;
     flex-grow: 1;
     margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for banner */
+    border-radius: 15px; /* Rounded corners for a smooth banner */
     z-index: 10; /* Ensuring content stays above the clouds and birds */
     position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow to give a banner effect */
 }
 
 /* Adjusted logo size for responsiveness */
@@ -30,13 +33,13 @@ body {
     width: 350px;
     max-width: 80%;
     margin-bottom: 20px;
-    z-index: 11; /* Ensuring logo stays above moving elements */
+    z-index: 11;
 }
 
 /* Error Title */
 .error-title {
     font-size: 4rem;
-    color: #333;
+    color: #fff; /* Keeping the text white for visibility */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
     margin-bottom: 10px;
@@ -47,7 +50,7 @@ body {
 .error-subtitle {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #555;
+    color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 12;
 }
@@ -85,7 +88,7 @@ body {
     left: 0;
     width: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    z-index: 10; /* Footer stays above clouds but behind content */
+    z-index: 10;
 }
 
 /* Clouds */
@@ -97,14 +100,14 @@ body {
     opacity: 0.9;
     left: -200px;
     animation: moveClouds 30s linear infinite;
-    z-index: 5; /* Clouds behind content and logo */
+    z-index: 5; /* Clouds behind the content and logo */
 }
 
 /* Bird container for movement */
 .bird-container {
     position: absolute;
     animation: flyBird 15s linear infinite;
-    z-index: 6; /* Birds behind content and logo */
+    z-index: 6; /* Birds behind the content and logo */
 }
 
 /* Bird with animated wings */
