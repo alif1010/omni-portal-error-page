@@ -90,7 +90,7 @@ body {
 .bird {
     width: 80px;
     height: 50px;
-    background-image: url('https://cdn.jsdelivr.net/gh/alif1010/omni-portal-error-page@main/bird.png'); /* Corrected bird image path */
+    background-image: url('https://alif1010.github.io/omni-portal-error-page/bird.png'); /* Corrected bird image path */
     background-size: contain;
     background-repeat: no-repeat;
     animation: flapWings 0.6s ease-in-out infinite; /* Wing flapping */
@@ -126,6 +126,7 @@ body {
     width: 100%;
     position: relative;
     bottom: 0;
+    z-index: 101; /* Ensure footer appears on top of other content */
 }
 
 /* Mobile Responsiveness */
