@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Font restored */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -18,33 +18,38 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px; /* Increased padding for larger devices */
+    padding: 40px 20px;
     flex-grow: 1;
-    margin-bottom: 20px; /* Add margin at the bottom so the footer doesn't overlap */
+    margin-bottom: 20px;
+    z-index: 10; /* Ensuring content stays above the clouds and birds */
+    position: relative;
 }
 
 /* Adjusted logo size for responsiveness */
 .logo {
-    width: 350px; /* Larger default size for bigger screens */
-    max-width: 80%; /* Ensure the logo scales well on mobile */
-    margin-bottom: 20px; /* Increased gap for larger screens */
+    width: 350px;
+    max-width: 80%;
+    margin-bottom: 20px;
+    z-index: 11; /* Ensuring logo stays above moving elements */
 }
 
 /* Error Title */
 .error-title {
-    font-size: 4rem; /* Larger size for bigger screens */
+    font-size: 4rem;
     color: #333;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
-    margin-bottom: 10px; /* Reduced gap for better balance */
+    margin-bottom: 10px;
+    z-index: 12;
 }
 
 /* Error Subtitle */
 .error-subtitle {
-    font-size: 1.5rem; /* Increased size for better readability on PCs */
+    font-size: 1.5rem;
     margin-bottom: 20px;
     color: #555;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 12;
 }
 
 /* Back button styling */
@@ -60,6 +65,7 @@ body {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     cursor: pointer;
+    z-index: 12;
 }
 
 .go-back:hover {
@@ -74,11 +80,12 @@ body {
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
-    position: relative; /* Let the footer stay at the bottom */
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Footer stays above clouds but behind content */
 }
 
 /* Clouds */
@@ -90,13 +97,14 @@ body {
     opacity: 0.9;
     left: -200px;
     animation: moveClouds 30s linear infinite;
+    z-index: 5; /* Clouds behind content and logo */
 }
 
 /* Bird container for movement */
 .bird-container {
     position: absolute;
     animation: flyBird 15s linear infinite;
-    z-index: 20;
+    z-index: 6; /* Birds behind content and logo */
 }
 
 /* Bird with animated wings */
