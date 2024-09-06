@@ -32,19 +32,21 @@ body {
 
 /* Adjusted logo size */
 .logo {
-    width: 300px; /* Increased logo size for better presentation */
-    margin-bottom: 20px;
+    width: 350px; /* Significantly increased logo size */
+    margin-bottom: 10px; /* Reduced the gap between the logo and the text */
 }
 
 .error-title {
-    font-size: 4.5rem;
+    font-size: 3.5rem; /* Reduced to maintain balance with the larger logo */
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px; /* Reduced top margin */
+    margin-bottom: 5px; /* Reduced bottom margin */
 }
 
 .error-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem; /* Slightly smaller for better visual hierarchy */
+    margin-bottom: 8px; /* Reduced margin below the subtitle */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
