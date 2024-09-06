@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    justify-content: space-between; /* Ensure the content and footer stay well-positioned */
+    justify-content: space-between;
     background: linear-gradient(135deg, #f0f4fd, #a7c4f2);
     color: white;
 }
@@ -18,29 +18,31 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px; /* Increased padding for larger devices */
     flex-grow: 1;
+    margin-bottom: 20px; /* Add margin at the bottom so the footer doesn't overlap */
 }
 
-/* Adjusted logo size */
+/* Adjusted logo size for responsiveness */
 .logo {
-    width: 300px;
+    width: 350px; /* Larger default size for bigger screens */
     max-width: 80%; /* Ensure the logo scales well on mobile */
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Increased gap for larger screens */
 }
 
 /* Error Title */
 .error-title {
-    font-size: 3rem;
+    font-size: 4rem; /* Larger size for bigger screens */
     color: #333;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
+    margin-bottom: 10px; /* Reduced gap for better balance */
 }
 
 /* Error Subtitle */
 .error-subtitle {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+    font-size: 1.5rem; /* Increased size for better readability on PCs */
+    margin-bottom: 20px;
     color: #555;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -72,7 +74,7 @@ body {
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
-    position: sticky; /* Keeps footer sticky at the bottom */
+    position: relative; /* Let the footer stay at the bottom */
     bottom: 0;
     left: 0;
     width: 100%;
@@ -129,7 +131,7 @@ body {
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     .error-title {
-        font-size: 2.5rem; /* Adjust title size for smaller screens */
+        font-size: 2.5rem;
     }
     .error-subtitle {
         font-size: 1.2rem;
@@ -145,7 +147,7 @@ body {
 
 @media screen and (max-width: 480px) {
     .error-title {
-        font-size: 2rem; /* Further adjust title size for smaller screens */
+        font-size: 2rem;
     }
     .error-subtitle {
         font-size: 1rem;
