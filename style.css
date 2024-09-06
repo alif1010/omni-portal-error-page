@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Ensure font is Poppins */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -22,10 +22,10 @@ body {
     flex-grow: 1;
     margin-bottom: 20px;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for banner */
-    border-radius: 15px; /* Rounded corners for a smooth banner */
+    border-radius: 15px; /* Rounded corners */
     z-index: 10; /* Ensuring content stays above the clouds and birds */
     position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow to give a banner effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for a banner effect */
 }
 
 /* Adjusted logo size for responsiveness */
@@ -39,7 +39,7 @@ body {
 /* Error Title */
 .error-title {
     font-size: 4rem;
-    color: #fff; /* Keeping the text white for visibility */
+    color: #fff; /* Keep the text white for visibility */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
     margin-bottom: 10px;
