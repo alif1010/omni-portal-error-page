@@ -10,7 +10,7 @@ body {
     overflow: hidden;
     transition: background 1s ease;
     color: white;
-    perspective: 1000px;
+    perspective: 1000px; /* 3D effect */
 }
 
 /* Main content area */
@@ -30,58 +30,70 @@ body {
     z-index: 100;
 }
 
-/* Logo size */
+/* Adjusted logo size */
 .logo {
-    width: 200px;
+    width: 200px; /* Slightly bigger logo */
     margin-bottom: 20px;
 }
 
-/* Title and subtitle */
-h1 {
+.error-title {
     font-size: 4.5rem;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-p {
+
+.error-subtitle {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Button styling */
-button {
+/* Back button styling */
+.go-back {
+    display: inline-block;
+    margin-top: 30px;
     padding: 15px 30px;
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: #fff;
-    border: none;
+    text-decoration: none;
     border-radius: 30px;
     font-size: 1.2rem;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
     cursor: pointer;
 }
-button:hover {
+
+.go-back:hover {
     background: linear-gradient(135deg, #0056b3, #004090);
     transform: scale(1.05);
 }
 
-/* Cloud styling */
+/* Clouds */
 .cloud {
     position: absolute;
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
     opacity: 0.9;
-    left: -200px;
+    left: -200px; /* Start cloud off-screen */
     animation: moveClouds 30s linear infinite;
 }
 
-/* Bird styling */
+/* Bird container for movement */
+.bird-container {
+    position: absolute;
+    animation: flyBird 15s linear infinite;
+    z-index: 20;
+}
+
+/* Bird with animated wings */
 .bird {
     width: 80px;
     height: 50px;
+    background-image: url('https://cdn.jsdelivr.net/gh/alif1010/omni-portal-error-page@main/bird.png'); /* Updated bird image path */
     background-size: contain;
     background-repeat: no-repeat;
-    animation: flapWings 0.6s ease-in-out infinite;
+    animation: flapWings 0.6s ease-in-out infinite; /* Wing flapping */
 }
 
 /* Wing flapping animation */
@@ -94,13 +106,13 @@ button:hover {
 /* Bird flying animation */
 @keyframes flyBird {
     0% { transform: translateX(-100px); }
-    100% { transform: translateX(100vw); }
+    100% { transform: translateX(100vw); } /* Fly from left to right across the screen */
 }
 
-/* Cloud movement animation */
+/* Cloud Animation */
 @keyframes moveClouds {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(100vw); }
+    0% { transform: translateX(0); } /* Start right off the screen */
+    100% { transform: translateX(100vw); } /* Move across the screen */
 }
 
 /* Footer */
@@ -114,4 +126,31 @@ button:hover {
     width: 100%;
     position: relative;
     bottom: 0;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .error-title {
+        font-size: 3.5rem;
+    }
+    .error-subtitle {
+        font-size: 1.2rem;
+    }
+    .go-back {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .error-title {
+        font-size: 3rem;
+    }
+    .error-subtitle {
+        font-size: 1rem;
+    }
+    .go-back {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
 }
